@@ -6,8 +6,8 @@ public class F1 extends Car {
 
     public F1(String name, boolean isManual) {
         //Use arbitrary values for parameters which are not mentioned
-        
-       super(name, isManual);
+        super(name);
+        this.isManual = isManual;
     }
 
     public void accelerate(int rate){
@@ -35,13 +35,13 @@ public class F1 extends Car {
             }else if (newSpeed > 50 && newSpeed <= 100){
                 changeGear(2);
                 changeSpeed(newSpeed,getCurrentDirection());
-            } else if (newSpeed > 101 && newSpeed <= 150){
+            } else if (newSpeed > 100 && newSpeed <= 150){
                changeGear(3);
                changeSpeed(newSpeed,getCurrentDirection());
             } else if (newSpeed > 150 && newSpeed <= 200){
                changeGear(4);
                changeSpeed(newSpeed,getCurrentDirection());
-            } else if (newSpeed > 201 && newSpeed <= 250){
+            } else if (newSpeed > 200 && newSpeed <= 250){
                changeGear(5);
                changeSpeed(newSpeed,getCurrentDirection());
             }else{
